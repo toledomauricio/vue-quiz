@@ -36,7 +36,7 @@ const app = Vue.createApp({
       this.selectedAnswer = "";
       this.correctAnswers = 0;
       this.wrongAnswers = 0;
-      this.barPercentage = 0;
+      this.barPercentage = 1;
       this.quizCompleted = false;
     },
   },
