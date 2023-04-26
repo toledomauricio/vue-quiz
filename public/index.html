@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>❓ Questionário</title>
+  </head>
+
+  <body class="antialiased text-gray-700 bg-gray-100">
+    <div id="app" class="flex w-full h-screen justify-center items-center">
+      <div class="w-full max-w-xl mt-2 p-3">
+        <div class="bg-beige p-12 rounded-lg shadow-lg w-full">
+          <h1 class="font-bold text-1x2 text-red">
+            ❓ Questionário
+          </h1>
+          <div class="mt-2">
+            <p class="text-2x1 font-bold py-2"></p>
+            <label>
+              <input
+                :id="index"
+                type="radio"
+              />
+            </label>
+            <div class="mt-6 flow-root">
+              <button>
+                Avançar
+              </button>
+              <button>
+                Finalizar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+  </body>
+</html>
