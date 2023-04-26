@@ -20,6 +20,7 @@
           </div>
           <div v-if="quizCompleted == false">
             <p class="text-sm text-gray-700">Pergunta {{idx+1}} de {{questionsLength}}</p>
+            <p class="font-bold text-1x2 mt-4 text-red">Pergunta {{idx+1}}</p>
           </div>
           <div v-if="idx < questionsLength" class="mt-2">
             <p class="text-2x1 font-bold py-2">{{questions[idx]['question']}}</p>
