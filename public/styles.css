@@ -502,6 +502,11 @@ video {
   background-color: rgba(229, 39, 41, var(--tw-text-opacity));
 }
 
+.bg-gray {
+  --tw-bg-opacity: 1;
+  background-color: rgba(209, 213, 219, var(--tw-bg-opacity));
+}
+
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
@@ -599,6 +604,11 @@ video {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-xs {
+  font-size: 0.200rem;
+  line-height: 0.5rem;
 }
 
 .text-lg {

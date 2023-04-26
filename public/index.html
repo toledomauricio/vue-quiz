@@ -15,6 +15,12 @@
           <h1 class="font-bold text-1x2 text-red">
             ❓ Questionário
           </h1>
+          <div class="w-full bg-gray mt-4 rounded-full">
+            <div class="bg-red text-xs font-1x2 text-white text-center rounded-full" :style="{ width: barPercentage + '%' }">&nbsp;</div>
+          </div>
+          <div v-if="quizCompleted == false">
+            <p class="text-sm text-gray-700">Pergunta {{idx+1}} de {{questionsLength}}</p>
+          </div>
           <div v-if="idx < questionsLength" class="mt-2">
             <p class="text-2x1 font-bold py-2">{{questions[idx]['question']}}</p>
             <label

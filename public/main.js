@@ -2,10 +2,12 @@ const app = Vue.createApp({
   data() {
     return {
       idx: 0,
+      quizCompleted: false,
       selectedAnswer: "",
       correctAnswers: 0,
       wrongAnswers: 0,
       questionsLength: 0,
+      barPercentage: 1,
       questions: [],
     };
   },
@@ -21,16 +23,21 @@ const app = Vue.createApp({
     nextQuestion() {
       this.idx++;
       this.selectedAnswer = "";
+      this.barPercentage = this.barPercentage + this.questionsLength + 1;
       document.querySelectorAll("input").forEach((el) => (el.checked = false));
     },
     showResults() {
       this.idx++;
+      this.barPercentage = 100;
+      this.quizCompleted = true;
     },
     resetQuiz() {
       this.idx = 0;
       this.selectedAnswer = "";
       this.correctAnswers = 0;
       this.wrongAnswers = 0;
+      this.barPercentage = 0;
+      this.quizCompleted = false;
     },
   },
   created() {
@@ -48,7 +55,7 @@ const app = Vue.createApp({
       .catch(error => {
         console.error('There was a problem with the fetch operation:', error);
       });
-  },
+  }
 });
 
 app.mount("#app");
