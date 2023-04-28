@@ -23,7 +23,7 @@ npm install
 Agora exponha o frontend e acesse-o em: (http://localhost:3000)
 
 ```bash
-npx serve build
+npx serve public
 ```
 
 Agora exponha a API
