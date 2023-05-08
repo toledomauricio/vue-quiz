@@ -3,7 +3,7 @@ const cors = require('cors');
 const app = express();
 const port = 3001;
 
-const data = require('./data.json');
+const data = require('./src/data.json');
 
 app.get('/', cors(), (req, res) => {
   res.json(data);
