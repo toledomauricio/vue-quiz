@@ -41,7 +41,7 @@ const app = Vue.createApp({
     },
   },
   created() {
-    fetch('http://localhost:3001/')
+    fetch('http://localhost:3001/api/questions/')
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
