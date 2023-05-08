@@ -7,7 +7,6 @@ export class ApiController {
   getAllQuestions() {
     const data = readFileSync('src/data.json', 'utf8');
     const questions = JSON.parse(data);
-    console.log(JSON.parse(data));
     return questions;
   }
 
@@ -15,9 +14,7 @@ export class ApiController {
   getQuestionsByQuizId(@Param('quizId') quizId: number) {
     const data = readFileSync('src/data.json', 'utf8');
     const questions = JSON.parse(data);
-    const filteredQuestions = questions.filter(
-      (question) => question.quizId === quizId
-    );
-    return filteredQuestions;
+    if (questions[quizId] !== undefined)
+      return questions[quizId];
   }
 }

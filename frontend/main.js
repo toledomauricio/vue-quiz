@@ -14,6 +14,7 @@ const app = Vue.createApp({
   methods: {
     answered(e) {
       this.selectedAnswer = e.target.value;
+      // se a resposta selecionada for igual a resposta correta
       if (this.selectedAnswer == this.questions[this.idx].correctAnswer) {
         this.correctAnswers++;
       } else {
@@ -23,12 +24,12 @@ const app = Vue.createApp({
     nextQuestion() {
       this.idx++;
       this.selectedAnswer = "";
-      this.barPercentage = this.barPercentage + this.questionsLength + 1;
+      this.barPercentage = this.barPercentage + this.questionsLength + 1; // incrementando a progress bar
       document.querySelectorAll("input").forEach((el) => (el.checked = false));
     },
     showResults() {
       this.idx++;
-      this.barPercentage = 100;
+      this.barPercentage = 100; // incrementando a progressbar até o final para evitar que fique 1% vazia
       this.quizCompleted = true;
     },
     resetQuiz() {
@@ -36,7 +37,7 @@ const app = Vue.createApp({
       this.selectedAnswer = "";
       this.correctAnswers = 0;
       this.wrongAnswers = 0;
-      this.barPercentage = 1;
+      this.barPercentage = 1; // esvaziando a progressbar
       this.quizCompleted = false;
     },
   },
